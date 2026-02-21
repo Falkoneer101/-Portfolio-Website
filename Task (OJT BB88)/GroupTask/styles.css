@@ -1,0 +1,203 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    background-color: white;
+    padding: 10px 0;
+    font-size: 17px;
+    color: #147CC3;
+    font-weight: 700;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+}
+
+.contact-icon {
+    filter: invert(36%) sepia(74%) saturate(3015%) hue-rotate(341deg) brightness(98%) contrast(97%);
+    width: 23px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle; 
+    display: inline-block;
+}
+
+.log-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.log-btn a {
+    text-decoration: none;
+    color: #147CC3;
+    font-weight: 700;
+}
+
+.register {
+    background-color: #f14336;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.nav-bar {
+    background-color: #147CC3;
+    border-bottom: 5px solid #f14336;
+    padding: 5px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.nav-links a.active {
+    background-color: white;
+    color: #147CC3;
+    font-weight: 800;
+}
+
+.nav-links a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tittle {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #f14336;
+}
+
+.slide {
+    position: relative;
+    height: 425px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #147CC3;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position: right center;
+    background-image: linear-gradient(to right, 
+        #147CC3 0%, 
+        #147CC3 10%, 
+        rgba(20, 124, 195, 0) 75%), 
+        url('img1.png');
+    transition: background 0.5s ease-in-out;
+}
+
+.slide .container {
+    justify-content: flex-start;
+    padding-left: 50px; 
+}
+
+.slider-text h1 {
+    font-size: 35px;
+    font-weight: 650;
+    line-height: 1.1;
+    margin-bottom: 60px;
+}
+
+.reg-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f14336;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+.reg-btn:hover {
+    background-color: #d1362d;
+    transform: translateY(-2px);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active { 
+    background: white; 
+}
