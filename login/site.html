@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: white;
+            color: gray;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .h2 {
+            color: white;
+        }
+        button.back {
+            background-color: #f44336;
+            
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="in.jpg">
+    <header>
+        <h1>Michael Jovenir</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to the Home Page:</h2>
+        <p>This is the home section of your website.</p>
+
+    
+        <section id="about">
+            <h2>About Us:</h2>
+            <p>Learn more about our website and what we do.</p>
+        </section>
+    
+        <section id="contact">
+            <h2>Contact Us:</h2>
+            <p>Feel free to reach out to us with any questions or concerns.</p>
+        </section>
+
+        <form>
+            <button type="button" class="back" onclick="goBack()">Back</button>
+        </form>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+</body>
+</html>

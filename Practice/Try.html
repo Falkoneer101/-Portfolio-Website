@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Shishabol</title>
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body{
+                height:100%;
+                scroll-behavior: smooth;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+                70% {
+                    opacity: 1;
+                }
+        }
+        body{
+            margin:0;
+            height: 200%;
+            font-family: "Courier New", monospace;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.65;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            }
+
+        @keyframes slideIn {
+        from {
+            margin-left: -50%;
+        }
+        to {
+            margin-left: 0;
+        }
+        }
+
+        h1 {
+           animation: slideIn 1s ease;
+        }
+        .column {
+            float: left ;
+            width: 35%;
+            padding: 95px;
+        }
+        .column2 {
+
+            float: right ;
+            width: 35%;
+            padding: 95px;
+        }
+        h1 {
+            color: white;
+            text-shadow: 0 0 25px #3466d1;
+            font-family: "Courier New", monospace;
+            font-size: 40px; 
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 25px;
+            color: orange;
+            font-family: Georgia, serif;
+            text-shadow: 0 0 25px #3466d1;
+            
+        }
+        h4 {
+            font-size: 25px;
+            color: #cc6252;
+            font-family: Georgia, serif;
+            text-shadow: 0 0 25px #3466d1;
+            
+        }
+        body{
+            background-image: url("bg.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        figcaption
+        {
+	        color: white;
+	        font-size: 1.2em;
+            text-shadow: 0 0 20px #3466d1;
+            font-style: italic;
+            text-align: center;
+            font-family: Verdana, sans-serif;
+        }
+        img {
+            border-radius: 10%;
+        }
+        .bottom-text {
+            position: absolute;
+            top: 100rem;
+            text-shadow: 0 0 50px #3466d1;
+            width: 100%;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            
+        }
+        p {
+            color: white;
+            text-shadow: 0 0 25px #3466d1;
+            font-family: "Courier New", monospace;
+            font-size: 20px; 
+            font-weight: bold;
+        }
+        hr {
+            height: 2px; 
+            background-color: #3466d1;
+
+        }
+        .video{
+            border: 2px solid #cc6252;
+        }
+        .video1{
+            border: 2px solid orange;
+        }
+        .hr1{
+           background-color: white;
+           border: 2px solid orange;
+        }
+        .hr2{
+            background-color: white;
+           border: 2px solid #cc6252;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">
+    <ins>What would you choose?</ins>
+</h1>
+    <div class="column">
+      <a href="https://slamdunk.fandom.com/wiki/Slam_Dunk">
+      <img src="bball.jpg" alt="slamdunk" width="520" height="300">
+      <figcaption>
+        <div class="fa-3x">
+        <i class="fa-solid fa-basketball fa-spin fa-xs" style="color: #d21414;"></i></div>
+        <h4><ins>Slam Dunk (スラムダンク):</ins></h4>Is a sports-themed manga series written by 
+        Takehiko Inoue about a basketball team from
+        Shōhoku High School. It was first serialized
+        in Weekly Shōnen Jump in Japan from 1990 to 
+        1996, and had also been adapted into an anime
+        series by Toei Animation, which had been broadcast
+        worldwide, enjoying much popularity, 
+        particularly in Japan.<br>
+        <hr>
+        Plot: <br>
+        The story follows Hanamichi Sakuragi, who 
+        becomes a basketball player from the Shohoku 
+        High School basketball team in order to make 
+        Haruko Akagi, a girl he likes, fall in love with
+        him. However, as he learns more about basketball 
+        and plays several games, he starts liking the sport.
+    </figcaption>
+        <hr class="hr2" width="400" >
+        <figure>
+            <video class="video" controls width="400">
+                <source src="basket1.mp4" type="video/mp4">
+            </video>
+    </a>
+    </div>
+    <div class="column2">
+      <a href="https://haikyuu.fandom.com/wiki/Haikyuu!!_Wiki">
+      <img src="vball.jpg" alt="volleyball" width="523" height="305">
+      <figcaption>
+        <div class="fa-3x">
+        <i class="fa-solid fa-volleyball fa-spin fa-xs" style="color: #d36c17;"></i></div>
+        <h3><ins>Haikyū (Japanese: ハイキュ):</ins></h3>Is a shōnen sports anime series based on the 
+        manga by Haruichi Furudate, and produced is by
+        Production I.G and Toho in conjunction with
+        Japanese television network MBS. The anime consits
+        of four seasons, four movies, In the United States, 
+        Sentai Filmworks has licenced the anime, and has 
+        dubbed seasons one to four in English and five OVAs.<br>
+        <hr>
+        Plot: <br>
+        Junior high school student, Shoyo Hinata, becomes obsessed with volleyball after catching a 
+        glimpse of Karasuno High School playing in Nationals
+        on TV. Of short stature himself, Hinata is inspired 
+        by a player the commentators nickname 'The Little 
+        Giant', Karasuno's short but talented wing spiker.
+     </figcaption>
+        
+        <figure>
+            <video class="video1" controls width="400">
+                <source src="volley.mp4" type="video/mp4">
+            </video>
+        <hr class="hr1">
+    </a>
+    </div>
+    <div class="bottom-text">
+        <p>Click photos to see more...</p>
+    </div>
+</body>
+</html>

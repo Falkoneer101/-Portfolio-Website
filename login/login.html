@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: gray;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px white;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        button.back {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <form action="site.html">
+        <h2>Login Form</h2>
+        <input type="text" placeholder="Username" required>
+        <br>
+        <input type="password" placeholder="Password" required>
+        <br>
+        <button type="button" class="back">Back</button>
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>

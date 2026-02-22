@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(bebi.jfif) no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: pink;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .yes, .no {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: red;
+            color: white;
+        }
+        .no {
+            background-color: grey;
+            color: white;
+            position: absolute;
+        }
+        .no:hover {
+            position: absolute;
+            left: 20%;
+            top: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <p id="message">Valo tayo magdamag pag walang pasok hehe...🤗</p>
+        <div class="buttons">
+            <button class="yes" onclick="alert('Yay! I love youuuuuuuuuuu bebii! ❤️')">Yes</button>
+            <button class="no" onmouseover="moveButton(this)" onclick="trollMessage()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton(button) {
+            let x = Math.random() * window.innerWidth * 0.7;
+            let y = Math.random() * window.innerHeight * 0.7;
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+        
+        function trollMessage() {
+            document.getElementById('message').innerText = "Oops! The 'No' button doesn't work! Guess you have to say Yes! 😜❤️";
+        }
+    </script>
+</body>
+</html>

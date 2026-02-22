@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background: #e0e0e058;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main--content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header-title{
+    color: rgba(113, 99, 189, 255);
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-box{
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+
+.search-box input{
+    background: transparent;
+    padding: 10px;
+}
+
+.search-box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5 ease-out;
+}
+
+.search-box i:hover{
+    transform: scale(1.1);
+}
+
+.main-highlight{
+    margin: 3% 0;
+    padding: 2%;
+    background-color: yellow;
+    border-radius: 8px;
+}
+
+.main-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title{
+    font-size: 20px;
+}
+
+.highlight-wrap{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x: hidden;
+}
+
+.highligh-card{
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.highlight-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.highlight-desc h4{
+    font-size: 10px;
+}
+
+.highligh-card:hover{
+    background-color: white;
+    box-shadow: rgba(176, 176, 176, 0.2) 0px 2px 8px 0px;
+}
+
+.main-menus{
+    min-height: 100vh;
+    background-color: white;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.main-details{
+    margin: 1rem 0 1.5rem 0;
+}
+
+.detail-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.detail-card{
+    min-height: 280px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    border-radius: 8px;
+    margin: 1% 0;
+    box-shadow: rgba(176, 176, 176, 0.2) 0px 2px 8px;
+}
+
+.detail-img{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+
+.detail-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%;
+}
+
+.detail-sub{
+    font-size: 12px;
+    color: var(--darkGreyColor);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+
+.price{
+    color: var(--primaryColor);
+}
+
+.detail-card:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.detail-card:hover .detail-img{
+    filter: opacity(1);
+}
+
+.detail-card:hover .detail-name h4{
+    color: lightgreen;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 250px;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;    
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#cartItems {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="time-balance.html">
+                    <i class="fas fa-clock"></i>
+                    <span>Time Balance</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="food-order.html">
+                    <i class="fas fa-hamburger"></i>
+                    <span>Food Menu</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="Login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <img src="img2.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="main-highlight">
+            <div class="main-header">
+                <h2 class="main-title">Recommendation</h2>
+            </div>
+            <div class="highlight-wrap">
+                <div class="highligh-card" onclick="addToCart(1)">
+                    <img src="ramen.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4 class="desc">Ramen</h4>
+                        <p>₱120.00</p>
+                    </div>
+                </div>
+
+                <div class="highligh-card" onclick="addToCart(2)">
+                    <img src="siomai-rice.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4 class="desc">siomai-rice</h4>
+                        <p>₱59.00</p>
+                    </div>
+                </div>
+
+                <div class="highligh-card" onclick="addToCart(3)">
+                    <img src="pancit-canton.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4 class="desc">Pancit-canton</h4>
+                        <p>₱40.00</p>
+                    </div>
+                </div>
+
+                <div class="highligh-card" onclick="addToCart(4)">
+                    <img src="chicken-burger.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4 class="desc">Chicken Burger</h4>
+                        <p>₱60.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menus">
+            <div class="main-filter">
+                <div>
+                    <h2 class="main-title">Menu</h2>
+                </div>
+            </div>
+            <div class="main-details">
+                <h3 class="main-title">Choose Order</h3>
+                <div class="detail-wrapper">
+                    <div class="detail-card" onclick="addToCart(1)">
+                        <img src="ramen.jpg" alt="" class="detail-img">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Ramen</h4>
+                                <p class="detail-sub">Spicy Tonkotsu Ramen</p>
+                                <p class="price">₱120.00</p>
+                                <button onclick="openCheckoutModal()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" onclick="addToCart(2)">
+                        <img src="siomai-rice.jpg" alt="" class="detail-img">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Siomai Rice</h4>
+                                <p class="detail-sub">4pcs Siomai with Rice</p>
+                                <p class="price">₱59.00</p>
+                                <button onclick="openCheckoutModal()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" onclick="addToCart(3)">
+                        <img src="pancit-canton.jpg" alt="" class="detail-img">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Pancit Canton</h4>
+                                <p class="detail-sub">Pancit Canton with egg and bread</p>
+                                <p class="price">₱40.00</p>
+                                <button onclick="openCheckoutModal()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" onclick="addToCart(4)">
+                        <img src="chicken-burger.jpg" alt="" class="detail-img">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chicken Burger</h4>
+                                <p class="detail-sub">Buttermilk Chicken Burger</p>
+                                <p class="price">₱60.00</p>
+                                <button onclick="openCheckoutModal()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card" onclick="addToCart(5)">
+                        <img src="sisig.jpg" alt="" class="detail-img">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Sisig</h4>
+                                <p class="detail-sub">Sisig with rice</p>
+                                <p class="price">₱55.00</p>
+                                <button onclick="openCheckoutModal()">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckoutModal()">&times;</span>
+            <h2>Checkout</h2>
+            <div id="cartItems"></div>
+            <p>Total: ₱<span id="totalAmount">0.00</span></p>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <script src="foodjs.js">
+    </script>
+</body>
+</html>

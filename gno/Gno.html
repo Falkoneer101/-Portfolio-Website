@@ -1,0 +1,335 @@
+<html>
+    <head>
+            <title>Activity 1</title>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> <!-- for font <3 -->
+
+        <style>
+            html, body{
+                height:100%;
+                scroll-behavior: smooth;
+            }
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            body{
+                margin:0;
+                height: 200%;
+                font-family: "Poppins", sans-serif;
+                font-weight: 300;
+                font-size: 1rem;
+                line-height: 1.65;
+                background-color: #15191D;
+                animation: fadeInAnimation ease 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+
+            }
+                body::-webkit-scrollbar {
+                    display: none;
+                    }
+
+            .banner{
+                max-height: 750px;
+                width: 50%;
+                position: relative;
+            }
+                .banner img{
+                    width: 200%;
+                    height: 50%;
+                }
+                .banner::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 200%;
+                    height: 104.5%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .banner > article .inner {
+                    display: inline-block;
+                    vertical-align: middle;
+                    z-index: 1;
+                }
+
+            .inner{
+                z-index: 2;
+            }
+            header{
+                margin-left: 85%;
+                margin-top: 35%;
+                font-size: 100%;
+                position: absolute;
+                top: 0;
+                color: white;
+                white-space: nowrap;
+            }
+                header h2{
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    margin: auto;
+
+                }
+                header p, .transition p {
+                    text-transform: uppercase;
+                    font-size: .75rem;
+                    font-weight: 10;
+                    margin: 0 0 .25rem 0;
+                    padding: 0 0 .75rem 0;
+                    letter-spacing: .25rem;
+                    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+                    color: rgba(255, 255, 255, 0.5)
+		        }
+                header:hover{
+                    transform: scale(1.2);
+                    color: rgba(255,255,255,0.5);
+                }
+            .footer{
+                top: 0;
+                color: white;
+                white-space: nowrap;
+            }
+                .footer h2{
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    margin: auto;
+                }
+                .footer p.cont {
+                    text-transform: uppercase;
+                    font-size: .75rem;
+                    font-weight: 300;
+                    margin: 0 0 .25rem 0;
+                    padding: 0 0 .75rem 0;
+                    letter-spacing: .25rem;
+                    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+		        }
+
+            h2{
+                font-size: 300%;
+            }
+
+            .feature{
+                background-color: #15191D;
+                padding-top: 20px;
+                height: 200px;
+                color: white;
+            }
+                .feature p{
+                    font-size: 18px;
+                    margin: -15px 20px 20px 42%;
+                    color: rgba(255,255,255,0.5)
+                }
+                .feature h2{
+                    margin: 30px 30px 30px 25%;
+                    text-transform: uppercase;
+                }
+                .featImg{
+                    float: left;
+                    margin: 50px;
+                    margin-left: 10%;
+                    height: 50%;
+
+                }    
+            .content{
+                margin-top: 0px;
+                height: 350px;
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.5);
+                background-color: rgb(214,212,214);
+                background-image: url(https://media.tenor.com/8gGCkmG_slAAAAAC/destiny2-beyond-light.gif);
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: cover;
+            }
+                .content::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 200%;
+                    height: 44.7%;
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+                .conImg{
+                    height: 350px;
+                    float: right;
+                    position: relative;
+                    z-index: 5;
+                }
+                .content p{
+                    position:absolute;
+                    margin-top: 110px;
+                    margin-left: 200px;
+                    float: left;
+                }
+                .content span{
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: white;
+                }
+                .content2{
+                padding-top: 50px;
+                height: 550px;
+                font-size: 18px;
+                background-color: #F2F2F2;
+                margin-left: 75px;
+                margin-right: 75px;
+
+            }
+                .content2 p{
+                    margin-top: 50px;
+                    position: relative;
+                    font-size: 0.95rem;
+                    text-align: center;
+                    color: rgba(0,0,0,0.5);
+                    max-height: 50px;
+                }
+                    .cont{
+                        margin-top: 100px;
+                    }
+                .content2 span{
+                    margin-left: 0px;
+                    font-size: 1.25rem;
+                    text-align: center;
+                    color: black;
+                }
+                
+                .container{
+                    padding-bottom: 150px;
+                    max-width: 670px;
+                    background-color: #FFFFFF;
+                    float: left;
+                }
+                .container2{
+                    padding-bottom: 165px;
+                    max-width: 670px;
+                    background-color: #FFFFFF;
+                    float: right;
+                }
+
+                    .container:hover, .container2:hover{
+                        transform: scale(1.05);
+                        box-shadow: 0 0 50px rgba(33,33,33,.2);
+                    }
+                    .container, .container2, header{
+                        transition: ease-in-out 0.8s;
+                    }
+
+            .transition{
+                margin-top: 250px;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background-image: url(https://www.wallpaperbetter.com/wallpaper/884/350/508/halo-stars-clouds-night-hd-1080P-wallpaper.jpg);
+                min-height: 250px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index:-1 ;
+                color: white;
+            }
+ 
+                .transition::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 32%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+            footer{
+                height: 50px;
+                background-color: black;
+                position: relative;
+                z-index: 5;
+                padding-top: 0.25rem;
+            }
+            footer p{
+                    text-transform: uppercase;
+                    font-size: .5rem;
+                    font-weight: 300;
+                    margin: 1rem .25rem .25rem 0;
+                    padding: 0 0 .75rem 0;
+                    letter-spacing: .25rem;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.5)
+                    }
+        </style>
+    </head>
+    <body>
+        <section class="banner">
+            <article>
+                <img src="https://www.wallpaperbetter.com/wallpaper/884/350/508/halo-stars-clouds-night-hd-1080P-wallpaper.jpg" alt=""/>
+                <div class="inner">
+                    <a href="#content">
+                        <header>
+                            <p>Activity 1 by Falkoneer</p>
+                            <h2>DESTINY 2</h2> 
+                        </header>
+                    </a>    
+                </div>
+            </article>
+
+        </section>
+
+        <section class="feature">
+            <img class="featImg" src="https://downloadr2.apkmirror.com/wp-content/uploads/2019/10/5db8754a3adad.png" />
+                <h2>NOSTRAM DESTINATIONEM CREAMUS.</h2><p> WE CREATE OUR OWN DESTINY.</p> <!-- ako naman sana itadhana para sakanya hehe... HAYST, CRINGE!!!! -->
+
+        </section>
+
+
+        
+        <section class="content" id="content"> <!--ampanget ng gif pag imported online, smh.-->
+            <img class="conImg" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWU2cjltd3N6dTB6eXE2aXRpb3hucHJoNndsdDRxbDA0bzhteDBzMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tDoWNu09H6WLmlCbVS/giphy.gif" />
+             <p><span> Destiny 2 </span>is a popular online multiplayer first-person shooter video game developed by Bungie, Inc.<br/>
+                 It is the sequel to the original Destiny game and was released in September 2017 for PlayStation 4, Xbox One, <br/> and Microsoft Windows. In October 2019, it became free-to-play with the launch of the New Light expansion.</p>
+        </section>
+
+        <section class="content2">
+            <div class="container">
+                <img class="conImg2" src="https://media.tenor.com/jgACxnTncdYAAAAd/destiny2-destiny.gif" />
+                <p><span>The Line Between Light And Dark Is So Very Thin. <br/> Do You Know Which Side You’re On?</span> </p> <!-- Mas prefer ko sa side nya.. katabi sya.... -->
+                <p class="cont">The game is set in a mythic science fiction world where players take on<br/>
+                     the role of Guardians, who are powerful warriors tasked with defending<br/>
+                      the last city on Earth from various alien threats and supernatural forces. </p>
+            </div>
+
+            <div class="container2">
+                <img class="conImg2" src="https://media.tenor.com/jgACxnTncdYAAAAd/destiny2-destiny.gif" />
+                <p><span>You're not brave, you've merely forgotten the fear of death</span> </p> <!-- Parang ako, kinalimutan na nya :<<<  -->
+                <p class="cont">Destiny 2 combines elements of traditional FPS gameplay with <br/>
+                    role-playing game elements, as players can customize their characters,<br/>
+                     acquire and upgrade weapons and armor, and engage in both<br/> PvE (Player vs. Environment) and PvP (Player vs. Player) activities.
+                    <br><br><br>
+                     (Wala nako mahanap na gif or image for placeholder huhuhu)</p>
+ 
+
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="inner footer">
+                    <p class="cont">deadline nalang hahabulin ko, hindi na maling tao :(</p> <!-- RT. -->
+                    <h2>PS: Miss ko na siya.</h2> <!-- nvm, di pala rt -->
+            </div>
+
+        </section>
+
+        <footer class="footer"><!-- miss ko na sya :<<<<  -->
+            <p>Activity 1 by Alen Guiwan</p>
+        </footer>
+
+
+
+    </body>
+ 
+</html><!-- would've used more images, but its hard to find fitting ones. (sanaol bagay. HAYST!!!!!!!!!!!)-->

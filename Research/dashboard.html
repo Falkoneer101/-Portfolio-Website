@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style2.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="wallet.html">
+                    <i class="fas fa-wallet"></i>
+                    <span>Wallet</span>
+                </a>
+            </li>
+            <li>
+                <a href="time-balance.html">
+                    <i class="fas fa-clock"></i>
+                    <span>Time Balance</span>
+                </a>
+            </li>
+            <li>
+                <a href="food-order.html">
+                    <i class="fas fa-hamburger"></i>
+                    <span>Food Menu</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <img src="img2.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="card-container">
+            <h3 class="main-title">Wallet Balance</h3>
+            <div class="card-wrapper">
+             <div class="payment-card light-red">
+                <div class="card-header">
+                    <div class="amount">
+                        <span class="title">
+                            Balance
+                        </span>
+                        <span class="amount-value" id="walletBalance">₱00.00</span>
+                    </div>
+                        <span class="icon">&#8369;</span>
+                </div>
+                        <span class="load-more"><a href="wallet.html">Load more</a></span>
+             </div>
+
+             <div class="payment-card light-purple">
+                <div class="card-header">
+                    <div class="amount">
+                        <span class="title">
+                        </span>
+                        <span class="amount-value">Food Order</span>
+                    </div>
+                        <span class="icon dark-purple"> <i class="fas fa-hamburger"></i></span>
+                </div>
+                        <span class="load-more"><a href="food-order.html">Order here</a></span>
+             </div>
+
+             
+             <div class="payment-card light-green">
+                <div class="card-header">
+                    <div class="amount">
+                        <span class="title">
+                        </span>
+                        <span class="amount-value">Time balance</span>
+                    </div>
+                        <span class="icon dark-green"> <i class="fas fa-clock"></i></span>
+                </div>
+                        <span class="load-more"><a href="time-balance.html">View Balance</a></span>
+             </div>
+
+             <div class="payment-card light-blue">
+                <div class="card-header">
+                    <div class="amount">
+                        <span class="title">
+                        </span>
+                        <span class="amount-value">Profile</span>
+                    </div>
+                        <span class="icon dark-blue"> <i class="fas fa-user"></i></span>
+                </div>
+                        <span class="load-more"><a href="profile.html">Click here</a></span>
+             </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateWalletBalance(newBalance) {
+            document.getElementById("walletBalance").innerText = `₱${newBalance.toFixed(2)}`;
+            localStorage.setItem("walletBalance", newBalance);
+        }
+
+       const storedBalance = localStorage.getItem("walletBalance");
+       if (storedBalance !== null){
+        const walletBalance = parseFloat(storedBalance);
+        updateWalletBalance(walletBalance);
+       }
+       
+    </script>
+</body>
+</html>

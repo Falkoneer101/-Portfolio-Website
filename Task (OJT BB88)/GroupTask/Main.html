@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="info" id="home">
+        <div class="container">
+            <span class="brand-name">International E-Digital Gaming Portal</span>
+        <div class="contact-info">
+                <span><img src="phone.png" alt="Phone" class="contact-icon"> +63 912 345 6789</span>
+                <span><img src="email.png" alt="Email" class="contact-icon"> info.sample@gmail.com</span>
+        </div>
+            <div class="log-btn">
+                <a href="#" class="login">Log In</a>
+                <a href="#" class="register">Register</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="IEG Logo">
+        </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About IEG</a></li>
+                <li><a href="#licensing">Licensing</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#developer">Developer Portal</a></li>
+                <li><a href="#">Store</a></li> 
+                <li><a href="#government">Government Dashboard</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tittle">
+        <h1>"Global Licensing for Responsible Digital Gaming"</h1>
+    </div>
+    <div class="slide" id="main-slide">
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="container">
+            <div class="slider-text">
+                <h1 id="slide-title">Apply for an IEG license<br>(new submissions).</h1>
+                <a href="#" id="slide-btn" class="reg-btn">Register Your Game</a>
+            </div>
+        </div>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <section class="news-section">
+        <div class="container news-container">
+            <div class="news-header">
+                <h2>News & Updates</h2>
+                <div class="news-filters">
+                    <button class="filter-btn active">Latest</button>
+                    <button class="filter-btn">2026 Updates <span class="notif-dot"></span></button>
+                    <button class="filter-btn">Previous</button>
+                </div>
+            </div>
+            <div class="carousel-control-wrapper">
+                <button class="arrow-btn" onclick="rotateNews(-1)">&#10094;</button>
+                <div class="news-cards" id="news-carousel">
+                    </div>
+                <button class="arrow-btn" onclick="rotateNews(1)">&#10095;</button>
+            </div>
+
+            <div class="btn-footer">
+                <button class="view-all-btn">View all</button>
+            </div>
+        </div>
+        <h2 class="about-title" id="about">About IEG Portal</h2>
+        <div class="about-banner-wrapper">
+            <div class="blue-pattern-bg">
+                <div class="overlap-container">
+                    <div class="info-card">
+                        <h3>Mission</h3>
+                        <p>"To provide a global licensing, distribution, and compliance system for casual, e-sports, and educational games." IEG exists to register, verify, and certify digital game titles across these three categories, ensuring each game meets international content and safety standards.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Vision</h3>
+                        <p>IEG aims to <strong>"become the world's trusted standard for safe, ethical, and legal digital gaming"</strong>. By enforcing consistent rules and using modern technology (QR codes, blockchain), IEG seeks to elevate trust in digital gaming worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container section-split">
+            <div class="split-image">
+                <img src="img8.png" alt="Organizational Structure">
+            </div>
+            <div class="split-text">
+                <h2 class="split-title">Organizational Structure</h2>
+                <p>IEG is governed by an international <strong>Governing Council</strong> and specialized divisions:</p>
+                <ul class="custom-list">
+                    <li><strong>Governing Council:</strong> Global representatives who set policies, ethics, and oversee the system.</li>
+                    <li><strong>Game Certification Division:</strong> Teams of content analysts, cybersecurity auditors, and educational experts who evaluate game submissions for compliance.</li>
+                    <li><strong>Compliance & Regional Enforcement:</strong> Ensures games align with local laws in each country and liaises with government agencies.</li>
+                    <li><strong>IEG Global Store Management:</strong> Curates and promotes licensed titles in the official IEG game store and manages distribution.</li>
+                </ul>
+                <p class="summary-text">This structure ensures clear governance and coordination between developers, regulators, and the IEG store.</p>
+            </div>
+        </div>
+
+        <div class="container section-split">
+            <div class="split-text">
+                <h2 class="split-title">Standards and Ethics</h2>
+                <p>IEG adheres to strict international standards:</p>
+                <ul class="custom-list">
+                    <li><strong>Global Guidelines:</strong> UNESCO ethical AI and digital content guidelines, ISO/IEC software and cybersecurity standards, WIPO intellectual property treaties, International Esports Federation (IESF) integrity standards, and key data privacy laws (e.g. GDPR, Philippine Data Privacy Act).</li>
+                    <li><strong>Content Ethics:</strong> All games must respect moral and cultural norms: no hate speech, no sexual or child exploitation, no deceptive gambling mechanics, and inclusion of responsible gaming warnings.</li>
+                    <li><strong>Technical Security:</strong> Rigorous technical audits ensure games are free of malware, secure in-app purchases, and fair for competitive play.</li>
+                </ul>
+                <p class="summary-text">By enforcing these standards, IEG guarantees licensed games are safe, legal, and appropriate for players worldwide.</p>
+            </div>
+            <div class="split-image">
+                <img src="img9.png" alt="Standards and Ethics">
+            </div>
+        </div>
+    </section>
+    <section class="licensing-section"> 
+        <div class="container">
+        <div class="licensing-banner" id="licensing">
+            <div class="licensing-left">
+                <div class="hud-container">
+                    <img src="img10.png" alt="Target HUD" class="hud-bg-img">
+                    <h2 class="licensing-title">LICENSING</h2>
+                </div>
+            </div>
+            <div class="licensing-stats">
+                <div class="progress-ring">
+                    <span class="count">1.2k</span>
+                </div>
+                <div class="stat-info">
+                    <h3>Licensed Game</h3>
+                    <p>Updated: December 18, 2025<br>8:00 am</p>
+                </div>
+            </div>
+            <div class="licensing-right">
+                <a href="#" class="register-game-btn">Register Your Game</a>
+            </div>
+        </div>
+
+        <div class="application-header">
+            <h2>Application Process</h2>
+            <p>Developers submit a license application through the portal, including the following materials:</p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">Game build files (installer, APK/IPA package).</div>
+            <div class="material-card">Trailer or gameplay video.</div>
+            <div class="material-card">Documentation (game description, target audience, monetization model, data handling statement, country-specific declarations).</div>
+            <div class="material-card">Developer/company information and intellectual property declarations.</div>
+            <div class="material-card full-row">
+                <strong>Initial licensing fee payment</strong>&nbsp;(US$20) to start the review process.
+            </div>
+        </div>
+            <p class="licensing-footer">The portal then evaluates the submission (content review, technical/security audit, educational validation if applicable, and ethical standards check) over 1-4 weeks.</p>
+        </div>
+    </section>
+    <section class="fee-section">
+        <div class="fee-banner">
+            <h2>Fee Structure</h2>
+            <p>The standard licensing fee is US$20 per game per year. This covers one year of certification, including compliance monitoring, updates, and seal revalidation. Developers can renew annually at the same rate. Volume discounts apply for large studios, and optional premium services (fast-track review, featured listings, analytics) are available for additional fees.</p>
+        </div>
+    </section>
+    <section class="categories-section">
+        <div class="container">
+            <div class="category-main-header">
+                <img src="img14.png" alt="Game Categories" class="header-line-img">
+            </div>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="card-img-box">
+                    <img src="img11.png" alt="Casual Games">
+                </div>
+                <div class="card-body">
+                    <h3>Casual Games</h3>
+                    <p>- simple, often mobile or web-based games.</p>
+                    <a href="#" class="learn-btn">Learn more</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-img-box">
+                    <img src="img12.png" alt="E-Sports Games">
+                </div>
+                <div class="card-body">
+                    <h3>E-Sports Games</h3>
+                    <p>- competitive multiplayer titles and tournament games.</p>
+                    <a href="#" class="learn-btn">Learn more</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-img-box">
+                    <img src="img13.png" alt="Educational Games">
+                </div>
+                <div class="card-body">
+                    <h3>Educational Games</h3>
+                    <p>- games with learning objectives and pedagogical design.</p>
+                    <a href="#" class="learn-btn">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-footer">
+            <p>When applying, developers must declare the game's category and target audience.</p>
+            <p>Each category may have specific review criteria (for example, educational games are reviewed by subject experts).</p>
+        </div>
+        <div class="footer-line-wrap"></div>
+    </section>
+    <section class="submission-section">
+        <div class="container-sub">
+            <h2>Submission Requirements</h2>
+            <p class="sub-intro">To apply for a license, developers must complete all required fields and upload supporting documents. Key requirements include:</p>
+
+            <div class="requirements-list">
+                <div class="req-bar"><strong>Game Build:</strong> The executable file or installer (desktop or mobile) of the game.</div>
+                <div class="req-bar"><strong>Gameplay Video:</strong> A short trailer or gameplay walkthrough.</div>
+                <div class="req-bar"><strong>Documentation:</strong> Written description of the game, intended age group, business model, and data/privacy practices.</div>
+                <div class="req-bar"><strong>Legal Declarations:</strong> Proof of developer identity, intellectual property rights, and compliance with any country-specific regulations.</div>
+                <div class="req-bar"><strong>Fee Payment:</strong> Proof of the $20 licensing fee transaction.</div>
+            </div>
+
+            <p class="sub-footer-note">
+                Incomplete submissions are returned for correction. All materials must be in English or accompanied by translations. A Download Guidelines document is available to help applicants prepare their submission.
+            </p>
+
+            <a href="#" class="download-guidelines-btn">Download Guidelines</a>
+        </div>
+    </section>
+        <section class="membership-overview" id="membership">
+            <div class="container-membership">
+                <div class="membership-text">
+                    <h2>Membership Overview</h2>
+                    <p>IEG Membership provides developers, organizations, and institutions with official access to the International eDigital Gaming (IEG) Portal. Membership allows users to participate in game licensing, compliance monitoring, and global distribution through the IEG ecosystem.</p>
+                    <p>Membership is designed to ensure accountability, transparency, and verified participation in responsible digital gaming.</p>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Who Can Apply for Membership</h3>
+                    <p class="card-subtitle">IEG Membership is open to:</p>
+                    
+                    <div class="pill-container">
+                        <span class="pill">Independent game developers</span>
+                        <span class="pill">Game development studios</span>
+                        <span class="pill">E-sports organizations</span>
+                        <span class="pill">Educational content creators</span>
+                        <span class="pill">Academic institutions</span>
+                        <span class="pill">Government-accredited partners</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="membership-types">
+            <div class="container-types">
+                <h2 class="types-main-title">Types of Membership</h2>
+                
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="type-img-box">
+                            <img src="img17.png" alt="Developer Membership">
+                        </div>
+                        <div class="type-content">
+                            <h3>Developer Membership</h3>
+                            <p>For individual developers and studios who wish to license, publish, and distribute games through the IEG Portal.</p>
+                            <div class="includes-box">
+                                <strong>Includes:</strong>
+                                <ul class="type-list">
+                                    <li>Access to the Developer Portal</li>
+                                    <li>Ability to register and license games</li>
+                                    <li>QR Code License generation</li>
+                                    <li>Annual compliance review access</li>
+                                    <li>Listing in the IEG Official Game Store</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-img-box">
+                            <img src="img20.png" alt="Institutional Membership">
+                        </div>
+                        <div class="type-content">
+                            <h3>Institutional / Organizational Membership</h3>
+                            <p>For companies, schools, e-sports bodies, and organizations involved in digital gaming.</p>
+                            <div class="includes-box">
+                                <strong>Includes:</strong>
+                                <ul class="type-list">
+                                    <li>Multiple developer account access</li>
+                                    <li>Bulk game licensing options</li>
+                                    <li>Compliance monitoring tools</li>
+                                    <li>Priority support</li>
+                                    <li>Eligibility for partnerships and promotions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-img-box">
+                            <img src="img19.png" alt="Government Membership">
+                        </div>
+                        <div class="type-content">
+                            <h3>Government & Regulatory Membership (By Accreditation)</h3>
+                            <p>For authorized government agencies and regulatory bodies.</p>
+                            <div class="includes-box">
+                                <strong>Includes:</strong>
+                                <ul class="type-list">
+                                    <li>Access to the Government Dashboard</li>
+                                    <li>Country-specific compliance reports</li>
+                                    <li>Violations monitoring</li>
+                                    <li>Analytics and policy support tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="types-action-row">
+                    <div class="action-strip">
+                        <span>Membership Requirements</span>
+                        <a href="#" class="view-btn">View</a>
+                    </div>
+                    <div class="action-strip">
+                        <span>Membership Benefits</span>
+                        <a href="#" class="view-btn">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="developer-portal" id="developer">
+            <div class="container">
+                <h2 class="portal-main-title">Developer Portal</h2>
+                
+                <div class="dashboard-header">
+                    <h3>Dashboard</h3>
+                    <p>Registered developers have access to a secure Developer Dashboard. The dashboard provides an overview of all submitted games, their license status, and pending tasks. Key features include:</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card active">
+                        <h4>Game List:</h4>
+                        <p>View all games you've submitted, along with current approval status.</p>
+                        <a href="#" class="see-btn">See less</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h4>License Status:</h4>
+                        <a href="#" class="see-btn">See more</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h4>Notification Center:</h4>
+                        <a href="#" class="see-btn">See more</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h4>QR Code Generator:</h4>
+                        <a href="#" class="see-btn">See more</a>
+                    </div>
+                </div>
+
+                <div class="portal-tabs">
+                    <a href="#" class="tab-link active">Upload & Updates</a>
+                    <a href="#" class="tab-link">License Renewal</a>
+                    <a href="#" class="tab-link">Analytics & Reports</a>
+                </div>
+
+                <p class="portal-footer-text">
+                    Through the portal, developers can upload new games and submit updates or patches for existing titles. 
+                    The upload panel enforces file format rules and collects version notes. Any update is re-evaluated for 
+                    compliance (especially if content has changed).
+                </p>
+            </div>
+        </section>
+        <section class="government-dashboard" id="government">
+            <div class="container">
+                <h2 class="gov-main-title">Government Dashboard</h2>
+                
+                <div class="gov-grid">
+                    <div class="gov-card">
+                        <div class="gov-img-box">
+                            <img src="img23.png" alt="Compliance Overview">
+                        </div>
+                        <div class="gov-content">
+                            <h3>Compliance Overview</h3>
+                            <p>A secure <strong>Government Dashboard</strong> is provided for authorized regulators and agencies. This restricted-access interface offers a high-level view of overall compliance. It displays the number of licensed games in each category, renewal statistics, and alerts for any content under review or investigation. Regulators can quickly identify trends in game registrations and monitor the health of the gaming ecosystem.</p>
+                        </div>
+                    </div>
+
+                    <div class="gov-card">
+                        <div class="gov-img-box">
+                            <img src="img24.png" alt="Reports & Violations">
+                        </div>
+                        <div class="gov-content">
+                            <h3>Reports & Violations</h3>
+                            <p>The dashboard includes detailed <strong>Country-Specific Reports</strong>. Governments can view a list of all licensed games distributed in their jurisdiction, along with any reported incidents. A Violations Database logs games found in breach of content rules (e.g. those requiring suspension or re-evaluation). Each entry includes the nature of the violation and actions taken.</p>
+                        </div>
+                    </div>
+
+                    <div class="gov-card">
+                        <div class="gov-img-box">
+                            <img src="img25.png" alt="Analytics & AI Insights">
+                        </div>
+                        <div class="gov-content">
+                            <h3>Analytics & AI Insights</h3>
+                            <p>IEG provides analytics tools (and planned AI insights) to help governments enforce regulations. For example, automated scans of game metadata can flag possible issues (like undisclosed gambling features). Heat maps and charts show compliance levels by region. These insights support data-driven policymaking and enforcement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials-section" id="testimonials">
+            <div class="testimonials-container">
+                <div class="testimonial-sidebar">
+                    <div class="quote-icon">“</div>
+                    <h2 class="testimonial-title">Testimonials</h2>
+                    <div class="slider-controls">
+                        <button id="prevBtn" class="control-btn" aria-label="Previous">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="control-btn" aria-label="Next">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-track">
+                        <div class="testimonial-item">
+                            <div class="testimonial-bubble">
+                                <p>“IEG gave our studio global credibility. The QR license system made our game instantly verifiable across multiple regions.”</p>
+                            </div>
+                            <div class="author-pill">
+                                <img src="img27.png" alt="Miguel">
+                                <div class="author-meta">
+                                    <h4>Miguel A. Santos</h4>
+                                    <p>Independent Game Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-bubble">
+                                <p>“The licensing process was clear and structured. IEG helped us meet international compliance standards without confusion.”</p>
+                            </div>
+                            <div class="author-pill">
+                                <img src="img28.png" alt="Alyssa">
+                                <div class="author-meta">
+                                    <h4>Alyssa R. Villanueva</h4>
+                                    <p>Lead Product Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-bubble">
+                                <p>“Having our educational game validated by IEG increased trust with schools and parents.”</p>
+                            </div>
+                            <div class="author-pill">
+                                <img src="img26.png" alt="Jonathan">
+                                <div class="author-meta">
+                                    <h4>Dr. Jonathan C. Reyes</h4>
+                                    <p>Director for Digital Learning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-bubble">
+                                <p>“IEG's compliance monitoring and reporting tools support safer digital gaming environments.”</p>
+                            </div>
+                            <div class="author-pill">
+                                <img src="img29.png" alt="Paolo">
+                                <div class="author-meta">
+                                    <h4>Engr. Paolo M. Dela Cruz</h4>
+                                    <p>Compliance Officer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-bubble">
+                                <p>“IEG provides a balanced framework that protects players while allowing gaming to grow responsibly.”</p>
+                            </div>
+                            <div class="author-pill">
+                                <img src="img30.png" alt="Sophia">
+                                <div class="author-meta">
+                                    <h4>Sophia L. Tan</h4>
+                                    <p>Regional Operations Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+                <p>We welcome inquiries from developers, organizations, government agencies, and partners worldwide.<br>
+                The International e-Digital Gaming (IEG) Portal is committed to transparent communication and responsive support.</p>
+                <p class="sub-text">Whether you need help with licensing, membership, compliance, or platform access, our team is ready to assist you.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Full Name">
+                        </div>
+                        <div class="input-group">
+                            <label>Organization / Company Name</label>
+                            <input type="text" placeholder="Organization / Company Name">
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea placeholder="Message..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-box">
+                <h3>Contact Info</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="phone.png" alt="Phone">
+                    </div>
+                    <span>0912 - 345 - 6789</span>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="email (4).png" alt="Email">
+                    </div>
+                    <span>info.sample@gmail.com</span>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <img src="location (3).png" alt="Location">
+                    </div>
+                    <span>Angeles City, Philippines</span>
+                </div>
+
+                <div class="social-section">
+                    <h4>Follow Us:</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn">
+                            <img src="facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-btn">
+                            <img src="instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-btn">
+                            <img src="youtube.png" alt="YouTube">
+                        </a>
+                        <a href="#" class="social-btn">
+                            <img src="twitter (1).png" alt="X">
+                        </a>
+                        <a href="#" class="social-btn">
+                            <img src="social-media (1).png" alt="TikTok">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <img src="logo.png" alt="IEG Logo" class="footer-logo">
+                    </div>
+                    <div class="footer-links-wrapper">
+                        <h4 class="links-title">Quick Links:</h4>
+                        <div class="links-columns">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About IEG</a></li>
+                                <li><a href="#licensing">Licensing</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#membership">Membership</a></li>
+                                <li><a href="#developer">Developer Portal</a></li>
+                                <li><a href="#">Store</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#government">Government Dashboard</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-slogan-bar">
+                <h2>Global Licensing for Responsible Digital Gaming</h2>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-container">
+                    <p>© 2025 International E-Digital Gaming Portal All Rights Reserved.</p>
+                    <p>Designed & Developed by: BB 88 Advertising and Digital Solutions Inc.</p>
+                </div>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

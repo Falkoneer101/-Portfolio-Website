@@ -1,0 +1,18 @@
+function loadMoney(){
+    const amount = document.querySelector(".amount").value;
+    const phone = document.querySelector(".phone").value;
+
+    if(!isNaN(amount)){
+        let currentBalance = parseFloat(localStorage.getItem("walletBalance")) || 0;
+        const newBalance = currentBalance + parseFloat(amount);
+
+        localStorage.setItem("walletBalance", newBalance);
+
+        alert(`Successfully loaded ₱${amount} to the wallet. New balance: ₱${newBalance.toFixed(2)}`);
+
+        window.location.href = "dashboard.html";
+        
+    }else{
+        alert("Invalid input. Please enter a valid amount.");
+    }
+}
